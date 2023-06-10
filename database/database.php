@@ -3,9 +3,9 @@
 class Database
 {
     private $servername = "localhost"; // Replace with your server name
-    private $username = "username"; // Replace with your username
-    private $password = "password"; // Replace with your password
-    private $dbname = "database"; // Replace with your database name
+    private $username = "root"; // Replace with your username
+    private $password = ""; // Replace with your password
+    private $dbname = "studentmanagementprogramme"; // Replace with your database name
     public $conn = '';
 
     public function __construct()
