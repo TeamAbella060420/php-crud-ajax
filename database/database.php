@@ -3,16 +3,16 @@
 class Database
 {
     private $servername = "localhost"; // Replace with your server name
-    private $username = "your_username"; // Replace with your username
-    private $password = "your_password"; // Replace with your password
-    private $database = "your_database"; // Replace with your database name
+    private $username = "username"; // Replace with your username
+    private $password = "password"; // Replace with your password
+    private $dbname = "database"; // Replace with your database name
     public $conn = '';
 
     public function __construct()
     {
         try {
             // Create a new PDO instance
-            $this->conn = new PDO("mysql:host=$this->servername;dbname=$this->database", $this->username, $this->password);
+            $this->conn = new PDO("mysql:host=$this->servername;dbname=$this->dbname", $this->username, $this->password);
 
             // Set PDO error mode to exception
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
