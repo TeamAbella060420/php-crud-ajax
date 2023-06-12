@@ -4,9 +4,18 @@ require_once('database.php');
 
 $dbo = new Database;
 
-$cmd = "insert into department_details (title, code) values('Department of Mechanical','ME')";
+$t= 'Department of Civil Engineering';
+$code = 'CE';
+
+$cmd = "insert into department_details (title, code) values(':titlex',':codex')";
 $statement = $dbo->conn->prepare($cmd);
-$statement->execute([""=>"", ""=> ""]);
+try {
+    //code...
+    $statement->execute([":titlex"=>"$t", ":codex"=> "$code"]);
+} catch (\Throwable $th) {
+    //throw $th;
+    echo ($th->getMessage());
+}
 
 // $cmd = "insert into department_details (title, code) values('Department of Electrical','EE')";
 
