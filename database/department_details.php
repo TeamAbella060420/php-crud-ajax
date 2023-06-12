@@ -4,8 +4,8 @@ require_once('database.php');
 
 $dbo = new Database;
 
-$cmd = "insert into department_details (title, code) values('Department of Electronics','ECE')";
-$stmnt = $dbo->$conn->prepare($cmd);
+$cmd = "insert into department_details (title, code) values('Department of Electrical','EE')";
+$stmnt = $dbo->conn->prepare($cmd);
 $stmnt->execute();
 
 
