@@ -12,8 +12,8 @@
             <h1>PROGRAMME DETAILS</h1>
         </div>
         <div>
-            <script src="../js/getprogrammedetails.js"></script>
             <script src="../global/jqeury.js"></script>
+            <script src="../js/getprogrammedetails.js"></script>
         </div>
     </main>
 </body>
