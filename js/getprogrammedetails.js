@@ -4,7 +4,7 @@ function getprogrammedetails() {
     type: "POST",
     dataType: "JSON",
     data: {a: "21", b: "flower", action: "getprogrammedetails"},
-
+    
     });
 }
 
