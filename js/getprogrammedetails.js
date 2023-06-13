@@ -7,8 +7,8 @@ function getprogrammedetails() {
     beforeSend: function() {
         alert("about to make an ajax call");
     },
-    success: function () {
-        
+    success: function (result) {
+            alert('success');
     }
     });
 }
