@@ -1,9 +1,9 @@
 function getprogrammedetails() {
     $.ajax({
     url: "../ajax/getprogrammedetailsAJAX.php",
-    type: "",
-    dataType: "json",
-
+    type: "POST",
+    dataType: "JSON",
+    data: "",
 
     });
 }
