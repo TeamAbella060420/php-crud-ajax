@@ -3,7 +3,7 @@ function getprogrammedetails() {
     url: "../ajax/getprogrammedetailsAJAX.php",
     type: "POST",
     dataType: "JSON",
-    data: "",
+    data: {},
 
     });
 }
