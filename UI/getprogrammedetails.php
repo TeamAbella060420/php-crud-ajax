@@ -13,6 +13,7 @@
         </div>
         <div>
             <script src="../js/getprogrammedetails.js"></script>
+            <script src="../global/jqeury.js"></script>
         </div>
     </main>
 </body>
