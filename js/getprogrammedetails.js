@@ -4,7 +4,12 @@ function getprogrammedetails() {
     type: "POST",
     dataType: "JSON",
     data: {a: "21", b: "flower", action: "getprogrammedetails"},
-    
+    beforeSend: function() {
+        alert("about to make an ajax call");
+    },
+    success: function () {
+        
+    }
     });
 }
 
