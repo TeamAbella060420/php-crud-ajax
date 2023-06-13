@@ -11,6 +11,9 @@
         <div>
             <h1>PROGRAMME DETAILS</h1>
         </div>
+        <div>
+            <script src="../js/getprogrammedetails.js"></script>
+        </div>
     </main>
 </body>
 </html>
