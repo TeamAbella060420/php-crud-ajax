@@ -12,9 +12,9 @@ $statement = $dbo->conn->prepare($cmd);
 try {
     //code...
     $statement->execute([":titlex"=>"$t", ":codex"=> "$code"]);
-} catch (\Throwable $th) {
+} catch (Exception $th) {
     //throw $th;
-    echo ($th->getMessage());
+    echo ($th->getMessage() . "<br>");
 }
 
 // $cmd = "insert into department_details (title, code) values('Department of Electrical','EE')";
