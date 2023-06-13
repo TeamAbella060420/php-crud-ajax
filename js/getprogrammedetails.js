@@ -1,10 +1,10 @@
 function getprogrammedetails() {
     $.ajax({
-    url: "",
+    url: "../ajax/getprogrammedetailsAJAX.php",
     type: "",
     dataType: "json",
 
-    
+
     });
 }
 
