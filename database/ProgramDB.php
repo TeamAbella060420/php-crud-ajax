@@ -17,7 +17,11 @@ class ProgramDB
         dd.code as dcode from programme_details as pd,
         department_details as dd where pd.department_id=dd.id";
 
-        $statement = $dbo->conn->execute($cmd);
+        $statement = $dbo->conn->prepare($cmd);
+        $statement->execute();
+        $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        return $rv;
     }
 }
 
