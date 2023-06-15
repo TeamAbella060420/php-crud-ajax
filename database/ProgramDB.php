@@ -27,7 +27,21 @@ class ProgramDB
     }
     public function createNewProgram($dbo,$code,$title,$nos,$gl,$tl,$did) 
     {
-        $cmd = "insert into programme_details (title,code,no_of_sem)";
+        $cmd = 
+        "insert into programme_details (title,code,no_of_sem,graduation_level,technical_level,department_id)
+            values(:title,:code,:no_of_sem,:graduation_level,:technical_level,:department_id)
+        ";
+        $statement = $dbo->conn->prepare($cmd);
+        $statement->execute(
+            [
+                ":title" => $title, 
+                ":code" => $code, 
+                ":no_of_sem" => $nos, 
+                ":graduation_level" => $gl, 
+                ":technical_level" => $tl,
+                ":department_id" => $did
+            ]);
+        $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 
