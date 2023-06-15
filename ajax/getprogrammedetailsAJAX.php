@@ -1,19 +1,22 @@
 <?php
 
-
-//a: "21", b: "flower", action: "getprogrammedetails"
-
 $p = $_POST["a"];
 $q = $_POST["b"];
-$action = $_POST["action1"];
+$action = $_POST["action"];
 
 if($action == "getprogrammedetails") {
- $result = [$p, $q, "from server"];
- $rv = json_encode($result);
- echo($rv);
- exit();
-}
-if($action1 == "getDepartmentdetails") {
-
+  $result = [$p, $q, "from server"];
+  $rv = json_encode($result);
+  echo $rv;
+  exit();
 }
 
+if($action == "getDepartmentdetails") {
+  // Add your code here to handle the "getDepartmentdetails" action
+  // For example:
+  // $departmentDetails = "Department details from server";
+  // $rv = json_encode($departmentDetails);
+  // echo $rv;
+}
+
+?>
