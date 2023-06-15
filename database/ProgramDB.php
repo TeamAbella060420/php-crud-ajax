@@ -13,6 +13,8 @@ class ProgramDB
         pd.no_of_sem as nos,
         pd.graduation_level as gl,
         pd.technical_level as tl,
+        dd.title as dtitle,
+        dd.code as dcode from programme_details as pd,
         department_details as dd where pd.department_id=dd.id";
     }
 }
