@@ -1,4 +1,7 @@
 <?php
+include_once "database.php";
+include_once "programme_details.php";
+include_once "department_details.php";
 
 //a: "21", b: "flower", action: "getprogrammedetails"
 $p = $_POST["a"];
