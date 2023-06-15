@@ -46,6 +46,7 @@ class ProgramDB
             return 1;
         } catch (\Throwable $th) {
             //throw $th;
+            return 0;
         }
     }
 }
