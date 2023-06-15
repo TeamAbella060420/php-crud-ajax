@@ -16,6 +16,8 @@ class ProgramDB
         dd.title as dtitle,
         dd.code as dcode from programme_details as pd,
         department_details as dd where pd.department_id=dd.id";
+
+        $statement = $dbo->conn->execute($cmd);
     }
 }
 
