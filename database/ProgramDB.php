@@ -14,8 +14,10 @@ class ProgramDB
         pd.graduation_level as gl,
         pd.technical_level as tl,
         dd.title as dtitle,
-        dd.code as dcode from programme_details as pd,
-        department_details as dd where pd.department_id=dd.id";
+        dd.code as dcode 
+            from programme_details as pd,
+        department_details as dd 
+            where pd.department_id=dd.id";
 
         $statement = $dbo->conn->prepare($cmd);
         $statement->execute();
