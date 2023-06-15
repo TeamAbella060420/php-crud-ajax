@@ -25,6 +25,10 @@ class ProgramDB
 
         return $rv;
     }
+    public function createNewProgram($dbo,$code,$title,$nos,$gl,$tl,$did) 
+    {
+
+    }
 }
 
 ?>
