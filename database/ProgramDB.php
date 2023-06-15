@@ -27,7 +27,7 @@ class ProgramDB
     }
     public function createNewProgram($dbo,$code,$title,$nos,$gl,$tl,$did) 
     {
-
+        $cmd = "insert into programme_details (title,code,no_of_sem)";
     }
 }
 
