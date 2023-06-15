@@ -32,16 +32,20 @@ class ProgramDB
             values(:title,:code,:no_of_sem,:graduation_level,:technical_level,:department_id)
         ";
         $statement = $dbo->conn->prepare($cmd);
-        $statement->execute(
-            [
-                ":title" => $title, 
-                ":code" => $code, 
-                ":no_of_sem" => $nos, 
-                ":graduation_level" => $gl, 
-                ":technical_level" => $tl,
-                ":department_id" => $did
-            ]);
-        $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
+        try {
+            //code...
+            $statement->execute(
+                [
+                    ":title" => $title, 
+                    ":code" => $code, 
+                    ":no_of_sem" => $nos, 
+                    ":graduation_level" => $gl, 
+                    ":technical_level" => $tl,
+                    ":department_id" => $did
+                ]);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 }
 
