@@ -43,6 +43,7 @@ class ProgramDB
                     ":technical_level" => $tl,
                     ":department_id" => $did
                 ]);
+            return 1;
         } catch (\Throwable $th) {
             //throw $th;
         }
