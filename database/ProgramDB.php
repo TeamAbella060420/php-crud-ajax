@@ -13,6 +13,7 @@ class ProgramDB
         pd.no_of_sem as nos,
         pd.graduation_level as gl,
         pd.technical_level as tl,
+        pd.department_id as did,
         dd.title as dtitle,
         dd.code as dcode 
             from programme_details as pd,
@@ -22,7 +23,6 @@ class ProgramDB
         $statement = $dbo->conn->prepare($cmd);
         $statement->execute();
         $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
-
         return $rv;
     }
     public function createNewProgram($dbo,$code,$title,$nos,$gl,$tl,$did) 
@@ -48,6 +48,10 @@ class ProgramDB
             //throw $th;
             return 0;
         }
+    }
+    public function getProgramDetailsByCode() 
+    {
+
     }
 }
 
