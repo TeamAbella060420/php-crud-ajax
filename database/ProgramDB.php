@@ -49,9 +49,51 @@ class ProgramDB
             return 0;
         }
     }
-    public function getProgramDetailsByCode() 
+    public function getProgramDetailsByCode($dbo,$code) 
     {
+        $cmd = "select 
+        pd.id as pid,
+        pd.code as pcode,
+        pd.title as ptitle,
+        pd.no_of_sem as nos,
+        pd.graduation_level as gl,
+        pd.technical_level as tl,
+        pd.department_id as did,
+        dd.title as dtitle,
+        dd.code as dcode 
+            from programme_details as pd,
+        department_details as dd 
+            where pd.department_id=dd.id
+        and 
+        pd.code=:code";
 
+        $statement = $dbo->conn->prepare($cmd);
+        $statement->execute([":code" => $code]);
+        $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $rv;
+    }
+    public function getProgramDetailsById($dbo,$id) 
+    {
+        $cmd = "select 
+        pd.id as pid,
+        pd.code as pcode,
+        pd.title as ptitle,
+        pd.no_of_sem as nos,
+        pd.graduation_level as gl,
+        pd.technical_level as tl,
+        pd.department_id as did,
+        dd.title as dtitle,
+        dd.code as dcode 
+            from programme_details as pd,
+        department_details as dd 
+            where pd.department_id=dd.id
+        and 
+        pd.id=:id";
+
+        $statement = $dbo->conn->prepare($cmd);
+        $statement->execute([":id" => $id]);
+        $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $rv;
     }
 }
 
