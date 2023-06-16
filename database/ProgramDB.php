@@ -95,6 +95,36 @@ class ProgramDB
         $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $rv;
     }
+    public function updateProgrammeDetail($dbo,$title,$code,$nos,$gl,$tl,$did)
+    {
+        $cmd = "update programme_details 
+            set 
+            title=:title,
+            code=:code,
+            no_of_sem=:no_of_sem,
+            graduation_level=:graduation_level,
+            technical_level=:technical_level,
+            department_id=:department_id,
+        ";
+        $statement = $dbo->conn->prepare($cmd);
+        try {
+            //code...
+            $statement->execute([
+                ":title" => $title,
+                ":code" => $code,
+                ":no_of_sem" => $nos,
+                ":graduation_level" => $gl,
+                ":technical_level" => $tl,
+                ":department_id" => $did,
+            ]);
+            return 1;
+        } catch (Exception $th) {
+            //throw $th;
+            return 0;
+        }
+        $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $rv;
+    }
 }
 
 ?>
