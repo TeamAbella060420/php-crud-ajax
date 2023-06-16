@@ -95,7 +95,7 @@ class ProgramDB
         $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $rv;
     }
-    public function updateProgrammeDetail($dbo,$title,$code,$nos,$gl,$tl,$did)
+    public function updateProgrammeDetail($dbo,$pid,$title,$code,$nos,$gl,$tl,$did)
     {
         $cmd = "update programme_details 
             set 
@@ -104,12 +104,15 @@ class ProgramDB
             no_of_sem=:no_of_sem,
             graduation_level=:graduation_level,
             technical_level=:technical_level,
-            department_id=:department_id,
+            department_id=:department_id
+
+            where id=:id
         ";
         $statement = $dbo->conn->prepare($cmd);
         try {
             //code...
             $statement->execute([
+                ":id" => $pid,
                 ":title" => $title,
                 ":code" => $code,
                 ":no_of_sem" => $nos,
