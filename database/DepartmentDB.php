@@ -7,7 +7,6 @@ class DepartmentDB
     public function getAllDepartments($dbo) 
     {
         $cmd = "select 
-        pd.department_id as did,
         dd.title as dtitle,
         dd.code as dcode 
             from
