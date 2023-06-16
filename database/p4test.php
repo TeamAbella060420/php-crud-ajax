@@ -9,7 +9,7 @@ $pdo = new ProgramDB();
 $rv = $pdo->getAllPrograms($dbo);
 print_r($rv);
 echo("<br>");
-$rv = $pdo->createNewProgram($dbo, "ME", "BTECH in Electronics", 8, "UG", "BTECH", 9); 
+$rv = $pdo->createNewProgram($dbo, "CSE", "BTECH in Electronics", 8, "UG", "BTECH", 3); 
 echo($rv);
 echo("<br>");
 $rv = $pdo->getAllPrograms($dbo);
