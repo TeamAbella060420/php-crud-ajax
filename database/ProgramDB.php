@@ -44,7 +44,7 @@ class ProgramDB
                     ":department_id" => $did
                 ]);
             return 1;
-        } catch (\Throwable $th) {
+        } catch (Exception $ee) {
             //throw $th;
             return 0;
         }
