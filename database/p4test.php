@@ -18,7 +18,10 @@ $rv = $pdo->getProgramDetailsById($dbo, 120);
 print_r($rv);
 echo("<br>");
 
-$rv = $pdo->updateProgrammeDetail($dbo, 120, "It is a cat", "FFF", 34, "G", "BTECH", 3);
+$rv = $pdo->updateProgrammeDetail($dbo, 120, "It is a wolf", "CSB", 34, "G", "BTECH", 3);
 print_r($rv);
+echo("<br>");
 
+$rv = $pdo->getAllPrograms($dbo);
+print_r($rv);
 ?>
