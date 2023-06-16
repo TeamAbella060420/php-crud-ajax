@@ -2,12 +2,14 @@
 
 require_once "database.php";
 require_once "ProgramDB.php";
+require_once "DepartmentDB.php";
 
 $dbo = new Database();
 $pdo = new ProgramDB();
+$ddo = new DepartmentDB();
 
-// $rv = $pdo->getAllPrograms($dbo);
-// print_r($rv);
+$rv = $ddo->getAllDepartments($dbo);
+print_r($rv);
 // echo("<br>");
 // $rv = $pdo->createNewProgram($dbo, "CSE", "BTECH in Electronics", 8, "UG", "BTECH", 3); 
 // echo($rv);
