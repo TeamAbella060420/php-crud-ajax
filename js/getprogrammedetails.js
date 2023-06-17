@@ -3,7 +3,7 @@ function getprogrammedetails() {
         url: "../ajax/getprogrammedetailsAJAX.php",
         type: "POST",
         dataType: "JSON",
-        data: {a: "21", b: "flower", action: "getprogrammedetails"},
+        data: {a: "21", b: "flower", action1: "getprogrammedetails"},
         beforeSend: function() {
             alert("About to make an AJAX call");
         },
