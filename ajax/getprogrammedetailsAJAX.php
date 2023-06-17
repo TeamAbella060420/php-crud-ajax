@@ -1,21 +1,19 @@
 <?php
 
-// $root = $_SERVER["DOCUMENT_ROOT"];
-include_once "/php-crud-ajax/database/database.php";
-include_once "/php-crud-ajax/database/ProgramDB.php";
+require_once "../database/database.php";
+require_once "../database/ProgramDB.php";
 
-$p = $_POST["a"];
-$q = $_POST["b"];
+// $p = $_POST["a"];
+// $q = $_POST["b"];
 $action = $_POST["action1"];
 
 if($action == "getprogrammedetails")
  {
-  $dbo = new Database();
-  $pdo = new ProgramDB();
+  // $dbo = new Database();
+  // $pdo = new ProgramDB();
 
-  $result = ["ubat"];
+  $result = ["ubatsss"];
   $rv = json_encode($result);
-
   echo($rv);
   exit();
 }
