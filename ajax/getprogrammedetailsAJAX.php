@@ -1,29 +1,24 @@
 <?php
 
-require_once "../database/database.php";
-require_once "../database/ProgramDB.php";
+// $root = $_SERVER["DOCUMENT_ROOT"];
+include_once "../database/database.php";
+include_once "../database/ProgramDB.php";
 
-// $p = $_POST["a"];
-// $q = $_POST["b"];
+$p = $_POST["a"];
+$q = $_POST["b"];
 $action = $_POST["action1"];
 
 if($action == "getprogrammedetails")
  {
-  // $dbo = new Database();
-  // $pdo = new ProgramDB();
+  $dbo = new Database();
+  $pdo = new ProgramDB();
 
-  $result = ["ubatsss"];
+  $result = $pdo->getAllPrograms($dbo);
   $rv = json_encode($result);
   echo($rv);
-  exit();
+ 
 }
 
-if($action == "getDepartmentdetails") {
-  // Add your code here to handle the "getDepartmentdetails" action
-  // For example:
-  // $departmentDetails = "Department details from server";
-  // $rv = json_encode($departmentDetails);
-  // echo $rv;
-}
+
 
 ?>
