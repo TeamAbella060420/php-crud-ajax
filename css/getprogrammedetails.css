@@ -3,3 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.test1 {
+    min-width: 100px;
+    min-height: 90vh;
+    border: solid 1px green;
+}
