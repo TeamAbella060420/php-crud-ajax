@@ -7,5 +7,18 @@
 .test1 {
     min-width: 100px;
     min-height: 90vh;
-    border: solid 1px green;
+    /* border: solid 1px green; */
+}
+
+.table-striped tbody tr:nth-child(2n) {
+    background-color: rgb(27, 222, 236);
+}
+
+.table-striped tbody tr:nth-child(2n+1) {
+    background-color: aquamarine;
+}
+
+.table-striped tbody tr td {
+    padding-top: 1rem;
+    padding-bottom: .5rem;
 }
