@@ -16,9 +16,5 @@ if($action == "getprogrammedetails")
   $result = $pdo->getAllPrograms($dbo);
   $rv = json_encode($result);
   echo($rv);
- 
 }
-
-
-
 ?>
