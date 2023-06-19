@@ -11,6 +11,9 @@
         <div>
             <h1>PROGRAMME DETAILS</h1>
         </div>
+        <div id="contentdiv" class="test1">
+
+        </div>
         <div>
             <script src="../global/jqeury.js"></script>
             <script src="../js/getprogrammedetails.js"></script>
