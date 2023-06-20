@@ -8,18 +8,23 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    --heading-font: 3.5rem;
+}
+
 .test1 {
     min-width: 100px;
     min-height: 90vh;
     /* border: solid 1px green; */
+    margin: 3rem;
 }
 
 .table-striped tbody tr:nth-child(2n) {
-    background-color: rgb(27, 222, 236);
+    background-color: rgb(164, 246, 252);
 }
 
 .table-striped tbody tr:nth-child(2n+1) {
-    background-color: aquamarine;
+    background-color: rgb(193, 238, 223);
 }
 
 .table-striped tbody tr td {
@@ -27,8 +32,38 @@ html {
     padding-bottom: .5rem;
 }
 
+.table-striped thead {
+    font-size: 2rem;
+}
+
+.table-striped tbody tr td {
+    font-size: 1.5rem;
+}
+
 .header {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-size: var(--heading-font);
+}
+
+.addnew {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    font-size: 1.5rem !important;
+}
+
+.btn:hover {
+    transform: translateY(-.5rem);
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.table-striped tbody tr:hover {
+    transform: translateY(-.5rem);
+    transition: .5s;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
