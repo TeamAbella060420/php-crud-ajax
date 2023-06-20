@@ -1,86 +1,96 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 :root {
-    --heading-font: 3.5rem;
-    --btn-font: 2rem;
-    --tr-font: 1.6rem;
-    --th-font: 2rem;
+  --heading-font: 3.5rem;
+  --btn-font: 2rem;
+  --tr-font: 1.6rem;
+  --th-font: 2rem;
+  --margin: 3rem;
 }
 
-@media (min-width: 0px ) and (max-width: 300px ) {
-    :root {
-        --heading-font: 2rem;
-        --btn-font: .5rem;
-        --tr-font: .8rem;
-        --th-font: .6rem;
-    }
+@media (min-width: 0px) and (max-width: 400px) {
+  :root {
+    --heading-font: 2rem;
+    --btn-font: 0.5rem;
+    --tr-font: 0.6rem;
+    --th-font: 0.6rem;
+    --margin: 1rem;
+  }
 }
 
-@media (min-width: 300px ) and (max-width: 600px ) {
-
+@media (min-width: 400px) and (max-width: 600px) {
+  :root {
+    --heading-font: 3rem;
+    --btn-font: 0.7rem;
+    --tr-font: 1.2rem;
+    --th-font: 0.9rem;
+    --margin: 2rem;
+  }
 }
 
 .test1 {
-    min-width: 100px;
-    min-height: 90vh;
-    /* border: solid 1px green; */
-    margin: 3rem;
+  min-width: 100px;
+  min-height: 90vh;
+  /* border: solid 1px green; */
+  margin: var(--margin);
 }
 
 .table-striped tbody tr:nth-child(2n) {
-    background-color: rgb(164, 246, 252);
+  background-color: rgb(164, 246, 252);
 }
 
-.table-striped tbody tr:nth-child(2n+1) {
-    background-color: rgb(193, 238, 223);
+.table-striped tbody tr:nth-child(2n + 1) {
+  background-color: rgb(193, 238, 223);
 }
 
 .table-striped tbody tr td {
-    padding-top: 1rem;
-    padding-bottom: .5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .table-striped thead {
-    font-size: var(--th-font);
+  font-size: var(--th-font);
 }
 
 .table-striped tbody tr td {
-    font-size: var(--tr-font);
+  font-size: var(--tr-font);
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: var(--heading-font);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: var(--heading-font);
 }
 
 .addnew {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .btn {
-    font-size: var(--btn-font) !important;
-    padding: .5rem !important;
+  font-size: var(--btn-font) !important;
+  padding: 0.5rem !important;
 }
 
 .btn:hover {
-    transform: translateY(-.5rem);
-    transition: .5s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transform: translateY(-0.5rem);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .table-striped tbody tr:hover {
-    transform: translateY(-.5rem);
-    transition: .5s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transform: translateY(-0.5rem);
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
