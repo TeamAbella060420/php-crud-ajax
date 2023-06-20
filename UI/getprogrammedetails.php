@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <div class="text-info text-center"> 
+        <div class="header"> 
             <h1>PROGRAMME DETAILS</h1>
         </div>
         <div id="contentdiv" class="test1">
