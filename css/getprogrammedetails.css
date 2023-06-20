@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 .test1 {
     min-width: 100px;
     min-height: 90vh;
@@ -21,4 +25,10 @@
 .table-striped tbody tr td {
     padding-top: 1rem;
     padding-bottom: .5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
