@@ -10,6 +10,22 @@ html {
 
 :root {
     --heading-font: 3.5rem;
+    --btn-font: 2rem;
+    --tr-font: 1.6rem;
+    --th-font: 2rem;
+}
+
+@media (min-width: 0px ) and (max-width: 300px ) {
+    :root {
+        --heading-font: 2rem;
+        --btn-font: .5rem;
+        --tr-font: .8rem;
+        --th-font: .6rem;
+    }
+}
+
+@media (min-width: 300px ) and (max-width: 600px ) {
+
 }
 
 .test1 {
@@ -33,11 +49,11 @@ html {
 }
 
 .table-striped thead {
-    font-size: 2rem;
+    font-size: var(--th-font);
 }
 
 .table-striped tbody tr td {
-    font-size: 1.5rem;
+    font-size: var(--tr-font);
 }
 
 .header {
@@ -53,7 +69,8 @@ html {
 }
 
 .btn {
-    font-size: 1.5rem !important;
+    font-size: var(--btn-font) !important;
+    padding: .5rem !important;
 }
 
 .btn:hover {
