@@ -10,7 +10,7 @@
 <body>
     <main>
         <div class="header"> 
-            <h1>PROGRAMME DETAILS</h1>
+            PROGRAMME DETAILS
         </div>
         <div id="contentdiv" class="test1">
 
