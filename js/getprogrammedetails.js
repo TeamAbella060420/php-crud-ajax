@@ -1,6 +1,6 @@
 function getHTML(result) {
     let x = "";
-    x += `<div><button class="btn btn-primary">ADD NEW</button></div>`;
+    x += `<div><button class="btn btn-primary addnew">ADD NEW</button></div>`;
     x += `<table class="table table-striped">`;
     x += `<thead>
         <th>SLNO</th>
@@ -22,7 +22,7 @@ function getHTML(result) {
             <td>${item['nos']}</td>
             <td>${item['gl']}</td>
             <td>${item['tl']}</td>
-            <td><button type="button" class=" btn btn-primary">EDIT</button> <button type="button" class="btn btn-danger">DELETE</button></td>
+            <td><button type="button" class=" btn btn-primary">EDIT</button></td>
         </tr>`;
     }).join("");
     x += `</tbody></table>`;
