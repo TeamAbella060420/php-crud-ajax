@@ -43,6 +43,10 @@ html {
   margin: var(--margin);
 }
 
+.table-striped thead {
+  background-color: rgb(225, 206, 241);
+}
+
 .table-striped tbody tr:nth-child(2n) {
   background-color: rgb(164, 246, 252);
 }
