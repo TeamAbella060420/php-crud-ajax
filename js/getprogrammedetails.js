@@ -1,6 +1,6 @@
 function getHTML(result) {
     let x = "";
-    x += `<div><button class="btn btn-primary addnew">ADD NEW</button></div>`;
+    x += `<div><button id="btnAddnew" class="btn btn-primary addnew">ADD NEW</button></div>`;
     x += `<table class="table table-striped">`;
     x += `<thead>
         <th>SLNO</th>
@@ -10,7 +10,7 @@ function getHTML(result) {
         <th>#SEM</th>
         <th>GRDTN_LVL</th>
         <th>TECH_LVL</th>
-        <th></th>
+        <th>ACTION</th>
     </thead>
     <tbody>`;
     x += result.map((item, index) => {
@@ -22,7 +22,10 @@ function getHTML(result) {
             <td>${item['nos']}</td>
             <td>${item['gl']}</td>
             <td>${item['tl']}</td>
-            <td><button type="button" class=" btn btn-primary">EDIT</button></td>
+            <td>
+                <span id="edit"><i class="fas fa-file-edit"></i></span>
+                <span id="delete"><i class="fas fa-trash-can"></i></span>
+            </td>
         </tr>`;
     }).join("");
     x += `</tbody></table>`;
@@ -55,7 +58,12 @@ function getprogrammedetails() {
     });
 }
 
+
+
 $(document).ready(function () {
     // alert('jQuery loaded!');
     getprogrammedetails();
+    $(document).on("click", "#btnAddnew", function(){
+        $("#modalprogram").modal('show');
+    });
 });
