@@ -116,4 +116,13 @@ html {
   display: flex;
   flex-direction: column;
   padding: 0.5em;
+  font-size: 1.8rem;
+}
+
+.myinputelement input {
+  padding: .8rem;
+}
+
+.myinputelement select {
+  padding: .8rem;
 }
