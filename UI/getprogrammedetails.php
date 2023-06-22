@@ -46,7 +46,13 @@
                         </div>
                         <div class="myinputelement">
                             <label for="">Graduation Level</label>
-                            <input type="text" >
+                            <select name="" id="">
+                                <option value="">NONE</option>
+                                <option value="">NONE</option>
+                                <option value="">NONE</option>
+                                <option value="">NONE</option>
+                                <option value="">NONE</option>
+                            </select>
                         </div>
                     </div>
                     <div class="modal-footer">
