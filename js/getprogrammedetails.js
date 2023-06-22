@@ -29,26 +29,33 @@ function getHTML(result) {
         </tr>`;
     }).join("");
     x += `</tbody></table>`;
-    
+    return x;
+}
+
+function getselectbox(result) {
+    let x = ``;
+    x += `<option value=-1>SELECT ONE</option>`;
+    x +=  result.map((item) => { 
+        return `
+    <option value=${item.did}>${item.dtitle}</option>
+    `});
+
     return x;
 }
 
 
-function getprogrammedetails() {
+
+function loadDepartments() {
     $.ajax({
         url: "../ajax/getprogrammedetailsAJAX.php",
         datatype: "JSON",
         method: "POST",
-        data: { a: "abab", b: "mommy", action1: "getprogrammedetails" },
-        // beforeSend: function() {
-        //     alert("About to make an AJAX call");
-        // },
-        success: function (result) {
-            let y = JSON.parse(result)
-            // alert(y);
-            // alert(html)
-            $("#contentdiv").html(getHTML(y));
-            // console.log(getHTML(result));
+        data: {action1: "getDepartmentDetails" },
+        success: function (ss) {
+            //    let x = JSON.stringify(result)
+            let y = JSON.parse(ss)
+            let html = getselectbox(y); 
+            $("#dddepartment").html(html);
         },
         error: function (error) {
             console.log(error);
@@ -59,11 +66,41 @@ function getprogrammedetails() {
 }
 
 
+function getprogrammedetails() {
+    $.ajax({
+        url: "../ajax/getprogrammedetailsAJAX.php",
+        datatype: "JSON",
+        method: "POST",
+        data: {action1: "getprogrammedetails" },
+        // beforeSend: function() {
+        //     alert("About to make an AJAX call");
+        // },
+        success: function (result) {
+            let y = JSON.parse(result)
+            console.log(y, 'www');
+            // alert(y);
+            // alert(html)
+            $("#contentdiv").html(getHTML(y));
+            $("#techLevel").html(y.map((item) => {
+                return `<option value=${item.did}>${item.tl}</option>`;
+            }));
+            // console.log(getHTML(result));
+        },
+        error: function (error) {
+            console.log(error);
+            alert('Error occurred');
+
+        }
+    }); 
+}
+
 
 $(document).ready(function () {
     // alert('jQuery loaded!');
     getprogrammedetails();
+    loadDepartments();
     $(document).on("click", "#btnAddnew", function(){
         $("#modalprogram").modal('show');
     });
+
 });
