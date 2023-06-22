@@ -19,23 +19,48 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        PROGRAMME DETAILS
-                        <button class="btn btn-danger">X</button>
+                        <h2>PROGRAMME DETAILS</h2>
+                        <button class="btn btn-danger" data-bs-dismiss="modal" type="button" aria-hidden="true">X</button>
                         
                     </div>
-                    <div class="modal-body"></div>
+                    <div class="modal-body">
+                        <div class="myinputelement">
+                            <label for="">Code</label>
+                            <input type="text" >
+                        </div>
+                        <div class="myinputelement">
+                            <label for="">Title</label>
+                            <input type="text" >
+                        </div>
+                        <div class="myinputelement">
+                            <label for="">Number of Semester</label>
+                            <input type="text" >
+                        </div>
+                        <div class="myinputelement">
+                            <label for="">Department</label>
+                            <input type="text" >
+                        </div>
+                        <div class="myinputelement">
+                            <label for="">Technical Level</label>
+                            <input type="text" >
+                        </div>
+                        <div class="myinputelement">
+                            <label for="">Graduation Level</label>
+                            <input type="text" >
+                        </div>
+                    </div>
                     <div class="modal-footer">
-                        <button class="btn btn-danger">Cancel</button>
+                        <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         <button class="btn btn-success">Save</button>
                     </div>
                 </div>
             </div>
         </div>
         <div>
-            <link rel="stylesheet" href="../global/all.min.css">
             <script src="../global/jqeury.js"></script>
-            <script src="../js/getprogrammedetails.js"></script>
             <script src="../global/bootstrap.bundle.min.js"></script>
+            <link rel="stylesheet" href="../global/all.min.css">
+            <script src="../js/getprogrammedetails.js"></script>
         </div>
     </main>
 </body>
