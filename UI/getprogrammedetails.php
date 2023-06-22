@@ -42,16 +42,22 @@
                         </div>
                         <div class="myinputelement">
                             <label for="">Technical Level</label>
-                            <input type="text" >
+                            <select name="" id="">
+                                <option value="">NONE</option>
+                                <option value="">UG</option>
+                                <option value="">PG</option>
+                                <option value="">Graduate</option>
+                                <option value="">Maters</option>
+                            </select>
                         </div>
                         <div class="myinputelement">
                             <label for="">Graduation Level</label>
                             <select name="" id="">
                                 <option value="">NONE</option>
-                                <option value="">NONE</option>
-                                <option value="">NONE</option>
-                                <option value="">NONE</option>
-                                <option value="">NONE</option>
+                                <option value="">UG</option>
+                                <option value="">PG</option>
+                                <option value="">Graduate</option>
+                                <option value="">Maters</option>
                             </select>
                         </div>
                     </div>
