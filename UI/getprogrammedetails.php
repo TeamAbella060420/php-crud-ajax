@@ -38,16 +38,16 @@
                         </div>
                         <div class="myinputelement">
                             <label for="">Department</label>
-                            <input type="text" >
+                            <select name="" id="dddepartment">
+                                
+                            </select>
                         </div>
                         <div class="myinputelement">
                             <label for="">Technical Level</label>
                             <select name="" id="">
                                 <option value="">NONE</option>
-                                <option value="">UG</option>
-                                <option value="">PG</option>
-                                <option value="">Graduate</option>
-                                <option value="">Maters</option>
+                                <option value="">BTECH</option>
+                                <option value="">MTECH</option>
                             </select>
                         </div>
                         <div class="myinputelement">
