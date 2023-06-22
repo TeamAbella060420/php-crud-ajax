@@ -39,15 +39,15 @@
                         <div class="myinputelement">
                             <label for="">Department</label>
                             <select name="" id="dddepartment">
-                                
+
                             </select>
                         </div>
                         <div class="myinputelement">
                             <label for="">Technical Level</label>
-                            <select name="" id="">
-                                <option value="">NONE</option>
+                            <select name="" id="techLevel">
+                                <!-- <option value="">NONE</option>
                                 <option value="">BTECH</option>
-                                <option value="">MTECH</option>
+                                <option value="">MTECH</option> -->
                             </select>
                         </div>
                         <div class="myinputelement">
