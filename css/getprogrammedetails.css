@@ -111,3 +111,8 @@ html {
   font-size: 3rem;
   cursor: pointer;
 }
+
+.myinputelement {
+  display: flex;
+  flex-direction: column;
+}
