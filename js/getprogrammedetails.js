@@ -103,4 +103,13 @@ $(document).ready(function () {
         $("#modalprogram").modal('show');
     });
 
+    $(document).on("click", "#btnsave", function () {
+        let txtcode = $("#txtcode").val();
+        let txttitle = $("#txttitle").val();
+        let txtnos = $("#txtnos").val();
+        let dddepartment = $("#dddepartment").val();
+        let ddtl = $("#ddtl").val();
+        let ddgl = $("#ddgl").val();
+    })
+
 });
