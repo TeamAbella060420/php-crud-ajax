@@ -117,11 +117,10 @@ $(document).ready(function () {
 
     $(document).on("keypress", "#txtnos", function (e) {
         // alert(e.keyCode)
-        if (e.keyCode >=48 && e.keyCode<=57) {
-            alert(e.keyCode)
-        } else {
+        if(!(e.keyCode >=48 && e.keyCode<=57)) {
+            // alert(e.keyCode)
             e.preventDefault();
-        }
+        } 
     })
 
 });
