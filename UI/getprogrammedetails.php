@@ -16,7 +16,7 @@
             
         </div>
         <div class="modal" id="modalprogram">
-            <div class="modal-dialog">
+            <div class="modal-dialog" style="margin-top: 10rem;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2>PROGRAMME DETAILS</h2>
@@ -52,7 +52,7 @@
                         </div>
                         <div class="myinputelement">
                             <label for="">Graduation Level</label>
-                            <select name="" id="">
+                            <select name="" id="ddgl">
                                 <option value="">NONE</option>
                                 <option value="">UG</option>
                                 <option value="">PG</option>
