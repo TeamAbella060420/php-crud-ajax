@@ -111,8 +111,10 @@ $(document).ready(function () {
         let ddtl = $("#ddtl").val();
         let ddgl = $("#ddgl").val();
 
-        if(txtcode != '' && txttitle != '' && txtnos != '' && dddepartment >= 0 && ddtl != '' && ddgl != '') {
-
+        if(txtcode !== '' && txttitle !== '' && txtnos !== '' && dddepartment >= 0) {
+            alert('valid input')
+        } else {
+            alert('invalid input')
         }
     })
 
