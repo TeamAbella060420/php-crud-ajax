@@ -110,6 +110,10 @@ $(document).ready(function () {
         let dddepartment = $("#dddepartment").val();
         let ddtl = $("#ddtl").val();
         let ddgl = $("#ddgl").val();
+
+        if(txtcode != '' && txttitle != '' && txtnos != '' && dddepartment >= 0 && ddtl != '' && ddgl != '') {
+
+        }
     })
 
 });
