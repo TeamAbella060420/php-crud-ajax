@@ -81,9 +81,6 @@ function getprogrammedetails() {
             // alert(y);
             // alert(html)
             $("#contentdiv").html(getHTML(y));
-            $("#techLevel").html(y.map((item) => {
-                return `<option value=${item.did}>${item.tl}</option>`;
-            }));
             // console.log(getHTML(result));
         },
         error: function (error) {
@@ -115,6 +112,15 @@ $(document).ready(function () {
             alert('valid input')
         } else {
             alert('invalid input')
+        }
+    })
+
+    $(document).on("keypress", "#txtnos", function (e) {
+        // alert(e.keyCode)
+        if (e.keyCode >=48 && e.keyCode<=57) {
+            alert(e.keyCode)
+        } else {
+            e.preventDefault();
         }
     })
 
