@@ -34,7 +34,7 @@ function getHTML(result) {
 
 function getselectbox(result) {
     let x = ``;
-    x += `<option value=-1>SELECT ONE</option>`;
+    x += `<option value=-1>-- SELECT ONE --</option>`;
     x +=  result.map((item) => { 
         return `
     <option value=${item.did}>${item.dtitle}</option>
