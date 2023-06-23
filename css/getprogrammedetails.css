@@ -121,8 +121,22 @@ html {
 
 .myinputelement input {
   padding: .8rem;
+  border-radius: 5px;
 }
 
 .myinputelement select {
   padding: .8rem;
+  border-radius: 5px;
+}
+
+.myinputelement input:focus {
+  outline: none;
+}
+
+.myinputelement select:focus {
+  outline: none;
+}
+
+#btn-x {
+  padding: 5px 12px !important;
 }
