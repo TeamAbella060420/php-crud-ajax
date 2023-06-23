@@ -20,21 +20,21 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2>PROGRAMME DETAILS</h2>
-                        <button class="btn btn-danger" data-bs-dismiss="modal" type="button" aria-hidden="true">X</button>
+                        <button id="btn-x" class="btn btn-danger " data-bs-dismiss="modal" type="button" aria-hidden="true">X</button>
                         
                     </div>
                     <div class="modal-body">
                         <div class="myinputelement">
                             <label for="">Code</label>
-                            <input type="text" >
+                            <input id="txtcode" type="text" >
                         </div>
                         <div class="myinputelement">
                             <label for="">Title</label>
-                            <input type="text" >
+                            <input id="txttitle" type="text" >
                         </div>
                         <div class="myinputelement">
                             <label for="">Number of Semester</label>
-                            <input type="text" >
+                            <input id="txtnos" type="text" >
                         </div>
                         <div class="myinputelement">
                             <label for="">Department</label>
@@ -44,10 +44,10 @@
                         </div>
                         <div class="myinputelement">
                             <label for="">Technical Level</label>
-                            <select name="" id="techLevel">
-                                <!-- <option value="">NONE</option>
+                            <select name="" id="ddtl">
+                                <option value="">NONE</option>
                                 <option value="">BTECH</option>
-                                <option value="">MTECH</option> -->
+                                <option value="">MTECH</option>
                             </select>
                         </div>
                         <div class="myinputelement">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-                        <button class="btn btn-success">Save</button>
+                        <button class="btn btn-success" id="btnsave">Save</button>
                     </div>
                 </div>
             </div>
