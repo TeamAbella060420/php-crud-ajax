@@ -25,17 +25,16 @@ class ProgramDB
         $rv = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $rv;
     }
-    public function createNewProgram($dbo,$code,$title,$nos,$gl,$tl,$did) 
+    public function createNewProgram($dbo, $code, $title, $nos, $gl, $tl, $did) 
     {
-        $cmd = 
-        "insert into programme_details (title,code,no_of_sem,graduation_level,technical_level,department_id)
-            values(:title,:code,:no_of_sem,:graduation_level,:technical_level,:department_id)
-        ";
+        $cmd = "INSERT INTO programme_details (title, code, no_of_sem, graduation_level, technical_level, department_id)
+                VALUES (:title, :code, :no_of_sem, :graduation_level, :technical_level, :department_id)";
         $statement = $dbo->conn->prepare($cmd);
+        
         try {
-            //code...
-            $statement->execute(
-                [
+            // Check if $did is set and has a value
+            if (isset($did)) {
+                $statement->execute([
                     ":title" => $title, 
                     ":code" => $code, 
                     ":no_of_sem" => $nos, 
@@ -43,12 +42,17 @@ class ProgramDB
                     ":technical_level" => $tl,
                     ":department_id" => $did
                 ]);
-            return 1;
+                
+                return 1;
+            } else {
+                return 0; // Return an appropriate error code or message if $did is not set
+            }
         } catch (Exception $ee) {
-            //throw $th;
+            // Handle the exception here or rethrow it
             return 0;
         }
     }
+    
     public function getProgramDetailsByCode($dbo,$code) 
     {
         $cmd = "select 
