@@ -72,8 +72,8 @@
         <div>
             <script src="../global/jqeury.js"></script>
             <script src="../global/bootstrap.bundle.min.js"></script>
-            <!-- <link rel="stylesheet" href="../global/all.min.css">
-            <script src="../js/getprogrammedetails.js"></script> -->
+            <link rel="stylesheet" href="../global/all.min.css">
+            <script src="../js/getprogrammedetails.js"></script>
         </div>
     </main>
 </body>
