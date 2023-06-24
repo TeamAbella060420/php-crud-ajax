@@ -108,9 +108,9 @@ function pushtotheserver(txtcode, txttitle, txtnos, dddepartment, ddtl, ddgl) {
         //     alert("About to make an AJAX call");
         // },
         success: function (result) {
-            let y = JSON.parse(result)
+            let y = JSON.stringify(result)
             console.log(y, 'www');
-            // alert(y);
+            alert(y);
             // alert(html)
             $("#contentdiv").html(getHTML(y));
             // console.log(getHTML(result));
