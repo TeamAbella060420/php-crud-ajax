@@ -35,7 +35,7 @@ function getHTML(result) {
 function getselectbox(result) {
     let x = ``;
     x += `<option value=-1>-- SELECT ONE --</option>`;
-    x +=  result.map((item) => { 
+    x += result.map((item) => {
         return `
     <option value=${item.did}>${item.dtitle}</option>
     `});
@@ -50,11 +50,11 @@ function loadDepartments() {
         url: "../ajax/getprogrammedetailsAJAX.php",
         datatype: "JSON",
         method: "POST",
-        data: {action1: "getDepartmentDetails" },
+        data: { action1: "getDepartmentDetails" },
         success: function (ss) {
             //    let x = JSON.stringify(result)
             let y = JSON.parse(ss)
-            let html = getselectbox(y); 
+            let html = getselectbox(y);
             $("#dddepartment").html(html);
         },
         error: function (error) {
@@ -71,7 +71,7 @@ function getprogrammedetails() {
         url: "../ajax/getprogrammedetailsAJAX.php",
         datatype: "JSON",
         method: "POST",
-        data: {action1: "getprogrammedetails" },
+        data: { action1: "getprogrammedetails" },
         // beforeSend: function() {
         //     alert("About to make an AJAX call");
         // },
@@ -88,7 +88,38 @@ function getprogrammedetails() {
             alert('Error occurred');
 
         }
-    }); 
+    });
+}
+function pushtotheserver(txtcode, txttitle, txtnos, dddepartment, ddtl, ddgl) {
+    $.ajax({
+        url: "../ajax/getprogrammedetailsAJAX.php",
+        datatype: "JSON",
+        method: "POST",
+        data: { 
+            txtcode: txtcode,
+            txttitle: txttitle,
+            txtnos: txtnos,
+            dddepartment: dddepartment,
+            ddtl: ddtl,
+            ddgl: ddgl,
+            action1: "saveprogrammedetails"
+        },
+        // beforeSend: function() {
+        //     alert("About to make an AJAX call");
+        // },
+        success: function (result) {
+            let y = JSON.parse(result)
+            console.log(y, 'www');
+            // alert(y);
+            // alert(html)
+            $("#contentdiv").html(getHTML(y));
+            // console.log(getHTML(result));
+        },
+        error: function (error) {
+            console.log(error);
+            alert('Error occurred');
+        }
+    })
 }
 
 
@@ -96,7 +127,7 @@ $(document).ready(function () {
     // alert('jQuery loaded!');
     getprogrammedetails();
     loadDepartments();
-    $(document).on("click", "#btnAddnew", function(){
+    $(document).on("click", "#btnAddnew", function () {
         $("#modalprogram").modal('show');
     });
 
@@ -108,8 +139,8 @@ $(document).ready(function () {
         let ddtl = $("#ddtl").val();
         let ddgl = $("#ddgl").val();
 
-        if(txtcode !== '' && txttitle !== '' && txtnos !== '' && dddepartment >= 0) {
-            alert('valid input')
+        if (txtcode !== '' && txttitle !== '' && txtnos !== '' && dddepartment >= 0) {
+            pushtotheserver(txtcode, txttitle, txtnos, dddepartment, ddtl, ddgl);
         } else {
             alert('invalid input')
         }
@@ -117,10 +148,10 @@ $(document).ready(function () {
 
     $(document).on("keypress", "#txtnos", function (e) {
         // alert(e.keyCode)
-        if(!(e.keyCode >=48 && e.keyCode<=57)) {
+        if (!(e.keyCode >= 48 && e.keyCode <= 57)) {
             // alert(e.keyCode)
             e.preventDefault();
-        } 
+        }
     })
 
 });
