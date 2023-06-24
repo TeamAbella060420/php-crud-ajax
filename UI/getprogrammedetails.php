@@ -65,14 +65,15 @@
                         <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         <button class="btn btn-success" id="btnsave">Save</button>
                     </div>
+                    <a href="" target="_blank"></a>
                 </div>
             </div>
         </div>
         <div>
             <script src="../global/jqeury.js"></script>
             <script src="../global/bootstrap.bundle.min.js"></script>
-            <link rel="stylesheet" href="../global/all.min.css">
-            <script src="../js/getprogrammedetails.js"></script>
+            <!-- <link rel="stylesheet" href="../global/all.min.css">
+            <script src="../js/getprogrammedetails.js"></script> -->
         </div>
     </main>
 </body>
