@@ -26,4 +26,24 @@ if($action == "getDepartmentDetails")
   $rv = json_encode($result);
   echo($rv);
 }
+
+// $dbo,$code,$title,$nos,$gl,$tl,$did
+
+if($action == "saveprogrammedetails")
+ {
+  $txtcode = $_POST['txtcode'];
+  $txttitle = $_POST['txttitle'];
+  $txtnos = $_POST['txtnos'];
+  $dddepartment = $_POST['dddepartment'];
+  $ddtl = $_POST['ddtl'];
+  $ddgl = $_POST['ddgl'];
+
+  $dbo = new Database();
+  $pdo = new ProgramDB();
+
+  $result = $pdo->createNewProgram($dbo,$txtcode,$txttitle,$txtnos,$dddepartment,$ddtl,$ddgl);
+  $rv = json_encode($result);
+  echo($rv);
+
+}
 ?>
